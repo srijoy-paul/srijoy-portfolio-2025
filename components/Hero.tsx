@@ -1,11 +1,13 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./TextGenerateEffect";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 function Hero() {
   return (
-    <div className="pb-20 pt-36 h-screen">
+    <section className="pb-20 pt-36  h-screen">
       <div className="">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -18,7 +20,7 @@ function Hero() {
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
-      <div className="absolute top-0 left-0 flex w-full items-center justify-center bg-white dark:bg-black-100 dark:bg-grid-white/[0.3] bg-grid-black/[0.2]">
+      <div className="h-screen absolute top-0 left-0 flex w-full items-center justify-center bg-white dark:bg-black-100 dark:bg-grid-white/[0.3] bg-grid-black/[0.2]">
         {/* Shadcn comp */}
         <div
           className={cn(
@@ -48,10 +50,18 @@ function Hero() {
               </span>
               , a Software Developer based in India.
             </p>
+            <a href="#about" className="mt-5 md:mt-10  w-full md:w-48">
+              <MagicButton
+                title="Show my Work"
+                icon={<FaLocationArrow />}
+                position="right"
+                otherClasses="gap-2"
+              />
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
