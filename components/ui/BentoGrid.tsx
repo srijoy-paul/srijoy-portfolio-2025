@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
+import GridGlobe from "./GridGlobe";
+import { SkillsGrid } from "./SkillsGrid";
+import { skills } from "@/lib/skills";
 
 export const BentoGrid = ({
   className,
@@ -45,7 +48,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 relative rounded-3xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-2 relative rounded-3xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden",
         className
       )}
       style={{
@@ -54,7 +57,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && "flex justify-center"} h-full`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full `}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -79,27 +82,27 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold " />
+            <div className="absolute z-50 flex items-center justify-center font-bold " />
           </BackgroundGradientAnimation>
         )}
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            "group-hover/bento:translate-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10  text-[#c1c2d3] dark:text-neutral-300 border border-red-300"
           )}
         >
           <div className="font-sans text-sm md:text-xs font-extralight text-[#c1c2d3] dark:text-neutral-300 lg:text-base z-10">
             {description}
           </div>
+          <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-2xl max-w-96 z-10">
+            {title}
+          </div>
+          {id === 5 && <SkillsGrid categories={skills} />}
         </div>
+
+        {id == 2 && <GridGlobe />}
       </div>
       {/* {header} */}
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
-        {/* {icon} */}
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
-          {title}
-        </div>
-      </div>
     </div>
   );
 };

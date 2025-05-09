@@ -6,17 +6,17 @@ const items: BentoGridItems[] = [
     title:
       "I build impactful systems with clean architecture and full-stack expertise.",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-2", //lg:min-h-[40vh]
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "./b11.svg",
     spareImg: "",
   },
   {
     id: 2,
     title: "I collaborate seamlessly across time zones and agile teams.",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
@@ -24,15 +24,16 @@ const items: BentoGridItems[] = [
   },
   {
     id: 3,
-    title: "My Tech Stack",
-    description:
-      "TypeScript, React, Node.js, PostgreSQL, Docker, Kubernetes, AWS, and more.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
+    title:
+      "Currently engineering a Web IDE & experimenting with animation libraries.",
+    description: "Passion for building dev tools and user-centric experiences.",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "absolute right-0 bottom-0 md:w-80 w-60",
+    titleClassName: "justify-center md:justify-start lg:justify-center",
+    img: "/b5.svg",
+    spareImg: "/grid.svg",
   },
+
   {
     id: 4,
     title: "A tech enthusiast with a love for elegant code and system design.",
@@ -45,14 +46,13 @@ const items: BentoGridItems[] = [
   },
   {
     id: 5,
-    title:
-      "Currently engineering a Web IDE & experimenting with animation libraries.",
-    description: "Passion for building dev tools and user-centric experiences.",
+    title: "My Tech Stack",
+    description: "",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    imgClassName: "",
+    titleClassName: "justify-center",
+    img: "",
+    spareImg: "",
   },
   {
     id: 6,

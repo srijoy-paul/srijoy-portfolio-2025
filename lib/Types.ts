@@ -1,3 +1,4 @@
+import React from "react";
 export type BentoGridItems = {
   title: string;
   description: string;
@@ -8,3 +9,8 @@ export type BentoGridItems = {
   img: string;
   spareImg: string;
 };
+
+export type Skills = Record<
+  string,
+  { name: string; icon?: string | React.ReactNode | null }[]
+>;
